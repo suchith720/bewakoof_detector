@@ -2,7 +2,7 @@ import gradio as gr
 from fastai.vision.all import *
 import skimage
 
-learner = load_learner("nadal_or_shark.pth")
+learner = load_learner("suchith_or_shivani.pth")
 
 labels = learner.dls.vocab
 def predict(img):
@@ -10,12 +10,10 @@ def predict(img):
     pred, pred_idx, prob = learner.predict(img)
     return {labels[i]: prob[i].item() for i in range(len(labels))}
 
-title = "Nadal vs Shark Classifier"
-description = "We present a classifier that is designed to accurately distinguish between the tennis superstar \
-Rafael Nadal and the aquatic animal known as the shark."
-article="<p style='text-align: center'><a href='https://tmabraham.github.io/blog/gradio_hf_spaces_tutorial' \
-target='_blank'>Blog post</a></p>"
-examples = ['nadal.jpg']
+title = "Bewakoof Detector"
+description = "Presenting the Bewakoof Detector - a tool designed to assess an individual's cognitive abilities. \
+    Please utilize this tool to determine if you possess the characteristics of a bewakoof."
+examples = ['suchith.jpg', 'shivani.jpg']
 interpretation='default'
 enable_queue=True
 
