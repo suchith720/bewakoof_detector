@@ -5,10 +5,11 @@ import skimage
 learner = load_learner("suchith_or_shivani.pth")
 
 labels = learner.dls.vocab
+label_map = {'suchith':'smart', 'shivani':'bewakoof'}
 def predict(img):
     img = PILImage.create(img)
     pred, pred_idx, prob = learner.predict(img)
-    return {labels[i]: prob[i].item() for i in range(len(labels))}
+    return {label_map[labels[i]]: prob[i].item() for i in range(len(labels))}
 
 title = "Bewakoof Detector"
 description = "Presenting the Bewakoof Detector - a tool designed to assess an individual's cognitive abilities. \
