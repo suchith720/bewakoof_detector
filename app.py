@@ -18,5 +18,5 @@ interpretation='default'
 enable_queue=True
 
 gr.Interface(fn=predict,inputs=gr.inputs.Image(shape=(512, 512)),outputs=gr.outputs.Label(num_top_classes=2),
-             title=title,description=description,article=article,examples=examples,
+             title=title,description=description,examples=examples,
              interpretation=interpretation,enable_queue=enable_queue).launch()
