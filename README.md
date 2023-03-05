@@ -7,7 +7,8 @@
 * I have created a [web app](https://huggingface.co/spaces/suchith720/bewakoof_detector) where you can upload your image to check if you bewakoof like her.
 
 
-> The information is related to deployment the App to huggingface spaces.
+> The information below is related to deployment of the web application to huggingface spaces.
+
 
 ---
 title: Bewakoof Detector
